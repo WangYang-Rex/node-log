@@ -1,0 +1,13 @@
+{
+    "apps": [{
+        "name": "crm-log",
+        "cwd": "./",
+        "error_file": "./crm-logs/pm2/error.log",
+        "out_file": "./crm-logs/pm2/out.log",
+        "script": "./server.js",
+        "log_date_format": "YYYY-MM-DD HH:mm Z",
+        "env": {
+            "NODE_ENV": "production"
+        }
+    }]
+}

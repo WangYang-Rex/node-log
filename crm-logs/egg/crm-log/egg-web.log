@@ -1,0 +1,45 @@
+2021-10-08 15:24:59,895 INFO 24678 [egg:logger] init all loggers with options: {"dir":"/Users/wy/project/node-log/crm-logs/egg/crm-log","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"crm-log-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-08 15:24:59,921 INFO 24678 [egg-multipart] stream mode enable
+2021-10-08 15:24:59,922 INFO 24678 [egg-mysql] connecting root@rm-uf6641yur4q7j47h7ko.mysql.rds.aliyuncs.com:3306/qd_web_log
+2021-10-08 15:25:00,440 INFO 24678 [egg-static] starting static serve /public/ -> /Users/wy/project/node-log/app/public
+2021-10-08 15:25:00,442 INFO 24678 [egg-security] use methodnoallow middleware
+2021-10-08 15:25:00,443 INFO 24678 [egg-security] use noopen middleware
+2021-10-08 15:25:00,444 INFO 24678 [egg-security] use nosniff middleware
+2021-10-08 15:25:00,444 INFO 24678 [egg-security] use xssProtection middleware
+2021-10-08 15:25:00,445 INFO 24678 [egg-security] use xframe middleware
+2021-10-08 15:25:00,446 INFO 24678 [egg-security] use dta middleware
+2021-10-08 15:25:00,446 INFO 24678 [egg-security] compose 6 middlewares into one security middleware
+2021-10-08 15:25:00,747 INFO 24678 [egg:core] dump config after load, 6ms
+2021-10-08 15:25:00,782 INFO 24678 [egg-watcher:application] watcher start success
+2021-10-08 15:25:00,863 INFO 24678 [egg-mysql] instance[0] status OK, rds currentTime: Fri Oct 08 2021 15:25:00 GMT+0800 (GMT+08:00)
+2021-10-08 15:25:00,882 INFO 24678 [egg:core] dump config after ready, 17ms
+2021-10-08 15:26:15,012 INFO 24741 [egg:logger] init all loggers with options: {"dir":"/Users/wy/project/node-log/crm-logs/egg/crm-log","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"crm-log-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-08 15:26:15,049 INFO 24741 [egg-multipart] stream mode enable
+2021-10-08 15:26:15,050 INFO 24741 [egg-mysql] connecting root@rm-uf6641yur4q7j47h7ko.mysql.rds.aliyuncs.com:3306/qd_web_log
+2021-10-08 15:26:15,276 INFO 24741 [egg-static] starting static serve /public/ -> /Users/wy/project/node-log/app/public
+2021-10-08 15:26:15,278 INFO 24741 [egg-security] use methodnoallow middleware
+2021-10-08 15:26:15,279 INFO 24741 [egg-security] use noopen middleware
+2021-10-08 15:26:15,280 INFO 24741 [egg-security] use nosniff middleware
+2021-10-08 15:26:15,281 INFO 24741 [egg-security] use xssProtection middleware
+2021-10-08 15:26:15,282 INFO 24741 [egg-security] use xframe middleware
+2021-10-08 15:26:15,282 INFO 24741 [egg-security] use dta middleware
+2021-10-08 15:26:15,283 INFO 24741 [egg-security] compose 6 middlewares into one security middleware
+2021-10-08 15:26:17,868 INFO 24741 [egg:core] dump config after load, 4ms
+2021-10-08 15:26:17,884 INFO 24741 [egg-watcher:application] watcher start success
+2021-10-08 15:26:17,947 INFO 24741 [egg-mysql] instance[0] status OK, rds currentTime: Fri Oct 08 2021 15:26:17 GMT+0800 (GMT+08:00)
+2021-10-08 15:26:17,955 INFO 24741 [egg:core] dump config after ready, 6ms
+2021-10-08 15:56:14,842 INFO 25196 [egg:logger] init all loggers with options: {"dir":"/Users/wy/project/node-log/crm-logs/egg/crm-log","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"crm-log-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-08 15:56:14,873 INFO 25196 [egg-multipart] stream mode enable
+2021-10-08 15:56:14,873 INFO 25196 [egg-mysql] connecting root@rm-uf6641yur4q7j47h7ko.mysql.rds.aliyuncs.com:3306/qd_web_log
+2021-10-08 15:56:15,109 INFO 25196 [egg-static] starting static serve /public/ -> /Users/wy/project/node-log/app/public
+2021-10-08 15:56:15,111 INFO 25196 [egg-security] use methodnoallow middleware
+2021-10-08 15:56:15,112 INFO 25196 [egg-security] use noopen middleware
+2021-10-08 15:56:15,112 INFO 25196 [egg-security] use nosniff middleware
+2021-10-08 15:56:15,113 INFO 25196 [egg-security] use xssProtection middleware
+2021-10-08 15:56:15,114 INFO 25196 [egg-security] use xframe middleware
+2021-10-08 15:56:15,115 INFO 25196 [egg-security] use dta middleware
+2021-10-08 15:56:15,115 INFO 25196 [egg-security] compose 6 middlewares into one security middleware
+2021-10-08 15:56:15,285 INFO 25196 [egg:core] dump config after load, 5ms
+2021-10-08 15:56:15,299 INFO 25196 [egg-watcher:application] watcher start success
+2021-10-08 15:56:15,479 INFO 25196 [egg-mysql] instance[0] status OK, rds currentTime: Fri Oct 08 2021 15:56:15 GMT+0800 (GMT+08:00)
+2021-10-08 15:56:15,488 INFO 25196 [egg:core] dump config after ready, 7ms

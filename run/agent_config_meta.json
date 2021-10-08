@@ -1,0 +1,338 @@
+{
+  "keys": "/Users/wy/project/node-log/config/config.default.ts",
+  "middleware": "/Users/wy/project/node-log/config/config.default.ts",
+  "security": {
+    "csrf": {
+      "enable": "/Users/wy/project/node-log/config/config.default.ts",
+      "ignoreJSON": "/Users/wy/project/node-log/config/config.default.ts",
+      "type": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "useSession": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "refererWhiteList": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+    },
+    "domainWhiteList": "/Users/wy/project/node-log/config/config.default.ts",
+    "protocolWhiteList": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/wy/project/node-log/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "ipExceptionList": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "cors": {
+    "origin": "/Users/wy/project/node-log/config/config.default.ts",
+    "allowMethods": "/Users/wy/project/node-log/config/config.default.ts"
+  },
+  "multipart": {
+    "mode": "/Users/wy/project/node-log/config/config.default.ts",
+    "fieldSize": "/Users/wy/project/node-log/config/config.default.ts",
+    "whitelist": "/Users/wy/project/node-log/config/config.default.ts",
+    "autoFields": "/Users/wy/project/node-log/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/wy/project/node-log/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/wy/project/node-log/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/wy/project/node-log/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/Users/wy/project/node-log/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/wy/project/node-log/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/wy/project/node-log/node_modules/egg-multipart/config/config.default.js",
+    "allowArrayField": "/Users/wy/project/node-log/node_modules/egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/wy/project/node-log/node_modules/egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/Users/wy/project/node-log/node_modules/egg-multipart/config/config.default.js",
+      "disable": "/Users/wy/project/node-log/node_modules/egg-multipart/config/config.default.js"
+    }
+  },
+  "mysql": {
+    "client": {
+      "host": "/Users/wy/project/node-log/config/config.local.ts",
+      "port": "/Users/wy/project/node-log/config/config.local.ts",
+      "user": "/Users/wy/project/node-log/config/config.local.ts",
+      "password": "/Users/wy/project/node-log/config/config.local.ts",
+      "database": "/Users/wy/project/node-log/config/config.local.ts"
+    },
+    "app": "/Users/wy/project/node-log/config/config.local.ts",
+    "agent": "/Users/wy/project/node-log/config/config.local.ts",
+    "default": {
+      "database": "/Users/wy/project/node-log/node_modules/egg-mysql/config/config.default.js",
+      "connectionLimit": "/Users/wy/project/node-log/node_modules/egg-mysql/config/config.default.js"
+    }
+  },
+  "cluster": {
+    "listen": {
+      "port": "/Users/wy/project/node-log/config/config.local.ts",
+      "hostname": "/Users/wy/project/node-log/config/config.local.ts",
+      "path": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    }
+  },
+  "logger": {
+    "dir": "/Users/wy/project/node-log/config/config.local.ts",
+    "encoding": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "env": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "level": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/Users/wy/project/node-log/node_modules/egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+  },
+  "session": {
+    "maxAge": "/Users/wy/project/node-log/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/wy/project/node-log/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/wy/project/node-log/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/wy/project/node-log/node_modules/egg-session/config/config.default.js",
+    "logValue": "/Users/wy/project/node-log/node_modules/egg-session/config/config.default.js"
+  },
+  "helper": {
+    "shtml": "/Users/wy/project/node-log/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/wy/project/node-log/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/Users/wy/project/node-log/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/Users/wy/project/node-log/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/wy/project/node-log/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/wy/project/node-log/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/Users/wy/project/node-log/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/wy/project/node-log/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/Users/wy/project/node-log/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/Users/wy/project/node-log/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/Users/wy/project/node-log/node_modules/egg-i18n/config/config.default.js",
+    "cookieDomain": "/Users/wy/project/node-log/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/wy/project/node-log/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/wy/project/node-log/node_modules/egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/Users/wy/project/node-log/node_modules/egg-watcher/config/config.default.js",
+      "development": "/Users/wy/project/node-log/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/Users/wy/project/node-log/node_modules/egg-schedule/config/config.default.js",
+      "file": "/Users/wy/project/node-log/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/Users/wy/project/node-log/node_modules/egg-schedule/config/config.default.js"
+  },
+  "development": {
+    "watchDirs": "/Users/wy/project/node-log/node_modules/egg-development/config/config.default.js",
+    "ignoreDirs": "/Users/wy/project/node-log/node_modules/egg-development/config/config.default.js",
+    "fastReady": "/Users/wy/project/node-log/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/wy/project/node-log/node_modules/egg-development/config/config.default.js",
+    "overrideDefault": "/Users/wy/project/node-log/node_modules/egg-development/config/config.default.js",
+    "overrideIgnore": "/Users/wy/project/node-log/node_modules/egg-development/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/wy/project/node-log/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/wy/project/node-log/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/wy/project/node-log/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/wy/project/node-log/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/wy/project/node-log/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/wy/project/node-log/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/wy/project/node-log/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/wy/project/node-log/node_modules/egg-static/config/config.default.js",
+    "dir": "/Users/wy/project/node-log/node_modules/egg-static/config/config.default.js",
+    "dynamic": "/Users/wy/project/node-log/node_modules/egg-static/config/config.default.js",
+    "preload": "/Users/wy/project/node-log/node_modules/egg-static/config/config.default.js",
+    "buffer": "/Users/wy/project/node-log/node_modules/egg-static/config/config.default.js",
+    "maxFiles": "/Users/wy/project/node-log/node_modules/egg-static/config/config.default.js"
+  },
+  "view": {
+    "root": "/Users/wy/project/node-log/node_modules/egg-view/config/config.default.js",
+    "cache": "/Users/wy/project/node-log/node_modules/egg-view/config/config.local.js",
+    "defaultExtension": "/Users/wy/project/node-log/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/wy/project/node-log/node_modules/egg-view/config/config.default.js",
+    "mapping": "/Users/wy/project/node-log/node_modules/egg-view/config/config.default.js"
+  },
+  "env": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "name": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "cookies": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "proxy": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "maxIpsCount": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "maxProxyCount": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "version": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "description": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "private": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "egg": {
+      "typescript": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "declarations": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    },
+    "scripts": {
+      "start": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "test-start": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "stop": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "dev": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "debug": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "test-local": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "test": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "cov": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "tsc1": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "tsc": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "ci": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "autod": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "lint": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "clean": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    },
+    "dependencies": {
+      "ali-oss": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "egg": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "egg-cors": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "egg-mysql": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "moment": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "mz": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "mz-modules": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "node-fetch": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "stream-to-array": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "stream-wormhole": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "shelljs": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "string-random": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "@types/mocha": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "@types/node": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "@types/supertest": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "autod": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "autod-egg": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "egg-bin": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "egg-ci": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "egg-mock": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "eslint": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "tslib": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "url": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    },
+    "eslintIgnore": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "author": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "license": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+  },
+  "baseDir": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "HOME": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "rundir": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "notFound": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "sitefile": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "middlewares": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "httpClient": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "formLimit": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "textLimit": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "strict": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "depth": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    },
+    "onerror": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "logging": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "serverTimeout": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+  "clusterClient": {
+    "maxWaitTime": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/Users/wy/project/node-log/node_modules/egg/config/config.default.js"
+}
