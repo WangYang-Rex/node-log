@@ -10,6 +10,10 @@ const plugin: EggPlugin = {
     enable: true,
     package: 'egg-cors',
   },
+  alinode: {
+    enable: true,
+    package: 'egg-alinode',
+  },
 };
 
 export default plugin;

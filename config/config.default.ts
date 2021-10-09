@@ -33,6 +33,18 @@ export default (appInfo: EggAppInfo) => {
       return true;
     },
   };
+  // alinode性能监控平台
+  config.alinode = {
+    appid: '89393',
+    secret: '51119364bc791d98b5d87a134ff70f8ebed420f3',
+    server: 'wss://agentserver.node.aliyun.com:8080',
+    // logdir: 'Node.js 性能平台日志输出地址绝对路径，与 NODE_LOG_DIR 保持一致。如：/tmp/',
+    error_log: [
+      '您的应用在业务层面产生的异常日志的路径，数组，可选，可配置多个',
+      '例如：/root/.logs/error.#YYYY#-#MM#-#DD#.log',
+      '不更改 Egg 默认日志输出路径可不配置本项目',
+    ],
+  };
   // the return config will combines to EggAppConfig
   return {
     ...config,
