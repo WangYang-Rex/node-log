@@ -9,7 +9,7 @@ export default (app: Application) => {
   router.post('/slink/list.rjson', controller.slink.list);
   router.post('/slink/del.rjson', controller.slink.del);
   router.post('/slink/detail.rjson', controller.slink.detail);
-  // router.get('/slink/jump/:slink', controller.slink.jump);
+  router.get('/slink/jump/:slink', controller.slink.jump);
 
   router.post('/file/list.rjson', controller.file.list);
   router.post('/file/delete.rjson', controller.file.delete);
