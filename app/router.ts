@@ -18,11 +18,11 @@ export default (app: Application) => {
   router.post('/file/upload/file.rjson', controller.file.fileUpload);
 
   // router.get('/', controller.home.index);
-  router.post([ '/error/list.rjson', '/list' ], controller.error.list);
-  router.post('/error/list/state.rjson', controller.error.state);
-  router.post('/error/add/log.rjson', controller.error.addLog);
-  router.post('/error/assign/userName.rjson', controller.error.assignUserName);
-  router.post('/git/notifyCommit', controller.error.gitNotifyCommit);
+  // router.post([ '/error/list.rjson', '/list' ], controller.error.list);
+  // router.post('/error/list/state.rjson', controller.error.state);
+  // router.post('/error/add/log.rjson', controller.error.addLog);
+  // router.post('/error/assign/userName.rjson', controller.error.assignUserName);
+  // router.post('/git/notifyCommit', controller.error.gitNotifyCommit);
   // router.get('/el.jpg', controller.error.parse);
 
   router.get('/hello.rjson', controller.home.index);

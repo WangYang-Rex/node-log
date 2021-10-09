@@ -1,26 +1,10 @@
-2021-10-08 15:24:56,428 INFO 24671 [egg:logger] init all loggers with options: {"dir":"/Users/wy/project/node-log/crm-logs/egg/crm-log","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"crm-log-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
-2021-10-08 15:24:56,437 INFO 24671 [egg:core] dump config after load, 5ms
-2021-10-08 15:24:56,485 INFO 24671 [egg-watcher] Start watching: ["/Users/wy/project/node-log/app","/Users/wy/project/node-log/config","/Users/wy/project/node-log/mocks","/Users/wy/project/node-log/mocks_proxy","/Users/wy/project/node-log/app.js"]
-2021-10-08 15:24:56,485 INFO 24671 [egg-watcher] Start watching: "/Users/wy/project/node-log/app"
-2021-10-08 15:24:56,485 INFO 24671 [egg-watcher] Start watching: "/Users/wy/project/node-log/config"
-2021-10-08 15:24:56,485 INFO 24671 [egg-watcher] Start watching: "/Users/wy/project/node-log/mocks"
-2021-10-08 15:24:56,485 INFO 24671 [egg-watcher] Start watching: "/Users/wy/project/node-log/mocks_proxy"
-2021-10-08 15:24:56,485 INFO 24671 [egg-watcher] Start watching: "/Users/wy/project/node-log/app.js"
-2021-10-08 15:24:56,486 INFO 24671 [egg-watcher:agent] watcher start success
-2021-10-08 15:24:56,523 INFO 24671 [egg:core] dump config after ready, 21ms
-2021-10-08 15:26:14,018 WARN 24671 [agent:development] reload worker because /Users/wy/project/node-log/app/router.ts change
-2021-10-08 15:26:13,807 INFO 24671 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/wy/project/node-log/app/router.ts","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4194304,"ino":8665015935,"size":1480,"blocks":8,"atimeMs":1633677944852.8936,"mtimeMs":1633677973742.529,"ctimeMs":1633677973742.529,"birthtimeMs":1631691830968.689,"atime":"2021-10-08T07:25:44.853Z","mtime":"2021-10-08T07:26:13.743Z","ctime":"2021-10-08T07:26:13.743Z","birthtime":"2021-09-15T07:43:50.969Z"},"remove":false,"isDirectory":false,"isFile":true}
-2021-10-08 15:56:13,163 WARN 24671 [agent:development] reload worker because /Users/wy/project/node-log/app/router.ts change
-2021-10-08 15:56:12,952 INFO 24671 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/wy/project/node-log/app/router.ts","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4194304,"ino":8665015935,"size":1480,"blocks":8,"atimeMs":1633678356295.9556,"mtimeMs":1633679772889.945,"ctimeMs":1633679772889.945,"birthtimeMs":1631691830968.689,"atime":"2021-10-08T07:32:36.296Z","mtime":"2021-10-08T07:56:12.890Z","ctime":"2021-10-08T07:56:12.890Z","birthtime":"2021-09-15T07:43:50.969Z"},"remove":false,"isDirectory":false,"isFile":true}
-2021-10-09 10:07:42,088 INFO 45834 [egg:logger] init all loggers with options: {"dir":"/Users/wy/project/node-log/crm-logs/egg/crm-log","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"crm-log-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
-2021-10-09 10:07:42,097 INFO 45834 [egg:core] dump config after load, 4ms
-2021-10-09 10:07:42,144 INFO 45834 [egg-watcher] Start watching: ["/Users/wy/project/node-log/app","/Users/wy/project/node-log/config","/Users/wy/project/node-log/mocks","/Users/wy/project/node-log/mocks_proxy","/Users/wy/project/node-log/app.js"]
-2021-10-09 10:07:42,144 INFO 45834 [egg-watcher] Start watching: "/Users/wy/project/node-log/app"
-2021-10-09 10:07:42,145 INFO 45834 [egg-watcher] Start watching: "/Users/wy/project/node-log/config"
-2021-10-09 10:07:42,145 INFO 45834 [egg-watcher] Start watching: "/Users/wy/project/node-log/mocks"
-2021-10-09 10:07:42,145 INFO 45834 [egg-watcher] Start watching: "/Users/wy/project/node-log/mocks_proxy"
-2021-10-09 10:07:42,145 INFO 45834 [egg-watcher] Start watching: "/Users/wy/project/node-log/app.js"
-2021-10-09 10:07:42,145 INFO 45834 [egg-watcher:agent] watcher start success
-2021-10-09 10:07:42,185 INFO 45834 [egg:core] dump config after ready, 18ms
-2021-10-09 10:08:12,986 INFO 45834 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/wy/project/node-log/app/router.ts","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4194304,"ino":8665064415,"size":1534,"blocks":8,"atimeMs":1633745292962.5576,"mtimeMs":1633745292921.1672,"ctimeMs":1633745292921.1672,"birthtimeMs":1631691830968.689,"atime":"2021-10-09T02:08:12.963Z","mtime":"2021-10-09T02:08:12.921Z","ctime":"2021-10-09T02:08:12.921Z","birthtime":"2021-09-15T07:43:50.969Z"},"remove":false,"isDirectory":false,"isFile":true}
-2021-10-09 10:08:13,191 WARN 45834 [agent:development] reload worker because /Users/wy/project/node-log/app/router.ts change
+2021-10-09 15:38:53,623 INFO 60213 [egg:logger] init all loggers with options: {"dir":"/Users/wy/project/node-log/crm-logs/egg/crm-log","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"crm-log-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-10-09 15:38:53,632 INFO 60213 [egg:core] dump config after load, 5ms
+2021-10-09 15:38:53,676 INFO 60213 [egg-watcher] Start watching: ["/Users/wy/project/node-log/app","/Users/wy/project/node-log/config","/Users/wy/project/node-log/mocks","/Users/wy/project/node-log/mocks_proxy","/Users/wy/project/node-log/app.js"]
+2021-10-09 15:38:53,677 INFO 60213 [egg-watcher] Start watching: "/Users/wy/project/node-log/app"
+2021-10-09 15:38:53,677 INFO 60213 [egg-watcher] Start watching: "/Users/wy/project/node-log/config"
+2021-10-09 15:38:53,677 INFO 60213 [egg-watcher] Start watching: "/Users/wy/project/node-log/mocks"
+2021-10-09 15:38:53,677 INFO 60213 [egg-watcher] Start watching: "/Users/wy/project/node-log/mocks_proxy"
+2021-10-09 15:38:53,677 INFO 60213 [egg-watcher] Start watching: "/Users/wy/project/node-log/app.js"
+2021-10-09 15:38:53,677 INFO 60213 [egg-watcher:agent] watcher start success
+2021-10-09 15:38:53,703 INFO 60213 [egg:core] dump config after ready, 10ms
