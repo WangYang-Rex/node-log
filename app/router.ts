@@ -25,6 +25,8 @@ export default (app: Application) => {
   router.post('/git/notifyCommit', controller.error.gitNotifyCommit);
   // router.get('/el.jpg', controller.error.parse);
 
+  router.get('/hello.rjson', controller.home.index);
+
   router.redirect('/', '/index.html', 302);
   router.get('/*', controller.home.index);
 };
