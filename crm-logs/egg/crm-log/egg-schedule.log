@@ -1,6 +1,0 @@
-2021-10-09 15:38:57,424 INFO 60213 [Timer] /Users/wy/project/node-log/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 46262582ms at 2021-10-10 04:30:00.006
-2021-10-09 15:38:57,425 INFO 60213 [Timer] /Users/wy/project/node-log/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 30062575ms at 2021-10-10 00:00:00.000
-2021-10-09 15:38:57,425 INFO 60213 [Timer] /Users/wy/project/node-log/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 30063575ms at 2021-10-10 00:00:01.000
-2021-10-09 15:38:56,748 INFO 60223 [egg-schedule]: register schedule /Users/wy/project/node-log/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
-2021-10-09 15:38:56,748 INFO 60223 [egg-schedule]: register schedule /Users/wy/project/node-log/node_modules/egg-logrotator/app/schedule/clean_log.js
-2021-10-09 15:38:56,748 INFO 60223 [egg-schedule]: register schedule /Users/wy/project/node-log/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
