@@ -8,10 +8,12 @@ type CanExportFunc = AnyFunc<Promise<any>> | AnyFunc<IterableIterator<any>>;
 type AutoInstanceType<T, U = T extends CanExportFunc ? T : T extends AnyFunc ? ReturnType<T> : T> = U extends AnyClass ? InstanceType<U> : U;
 import ExportFile from '../../../app/service/File';
 import ExportSlink from '../../../app/service/slink';
+import ExportWxapi from '../../../app/service/wxapi';
 
 declare module 'egg' {
   interface IService {
     file: AutoInstanceType<typeof ExportFile>;
     slink: AutoInstanceType<typeof ExportSlink>;
+    wxapi: AutoInstanceType<typeof ExportWxapi>;
   }
 }

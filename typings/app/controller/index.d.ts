@@ -5,11 +5,13 @@ import 'egg';
 import ExportFile from '../../../app/controller/file';
 import ExportHome from '../../../app/controller/home';
 import ExportSlink from '../../../app/controller/slink';
+import ExportWxapi from '../../../app/controller/wxapi';
 
 declare module 'egg' {
   interface IController {
     file: ExportFile;
     home: ExportHome;
     slink: ExportSlink;
+    wxapi: ExportWxapi;
   }
 }
