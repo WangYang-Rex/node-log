@@ -151,6 +151,19 @@
       "GET"
     ],
     "paramNames": [],
+    "path": "/wxapi/test.rjson",
+    "regexp": "/^\\/wxapi\\/test\\.rjson(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
     "path": "/hello.rjson",
     "regexp": "/^\\/hello\\.rjson(?:\\/(?=$))?$/",
     "stack": [

@@ -26,6 +26,8 @@ export default (app: Application) => {
   // router.get('/el.jpg', controller.error.parse);
 
   router.get('/wxapi/callback.rjson', controller.wxapi.callback);
+  router.get('/wxapi/test.rjson', controller.wxapi.test)
+  // router.get('/wxapi/getAccessToken.rjson', controller.wxapi.getAccessToken);
 
   router.get('/hello.rjson', controller.home.index);
 

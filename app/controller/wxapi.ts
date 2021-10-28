@@ -4,9 +4,40 @@ const crypto = require('crypto');
 
 export default class Wxapi extends Controller {
 
-  sign() {
+  async test() {
+    const { ctx } = this;
+    const query = ctx.request.query;
 
+    const { api } = query;
+    if(api) {
+      switch(api) {
+        case 'getAccessToken': {
+          const access_token = await this.service.wxapi.getAccessToken();
+          this.success('getAccessToken', access_token);
+          break;
+        }
+        case 'getJsApiTicket': {
+          const jsapi_ticket = await this.service.wxapi.getJsApiTicket();
+          this.success('success', jsapi_ticket);
+          break;
+        }
+        // case 'getAccessToken': {
+        //   await this.getAccessToken();
+        //   break;
+        // }
+        default: {
+          this.success('未找到对应的api')
+        }
+      }
+    } else {
+      this.success('未找到api参数')
+    }
   }
+
+  // async getAccessToken () {
+  //   const access_token = await this.service.wxapi.getAccessToken();
+  //   this.success('getAccessToken', access_token);
+  // }
 
   // 微信接入验证 https://developers.weixin.qq.com/doc/offiaccount/Basic_Information/Access_Overview.html
   public async callback() {
@@ -23,7 +54,7 @@ export default class Wxapi extends Controller {
     console.log(signature, timestamp, nonce, echostr);
 
     //2.将token、timestamp、nonce三个参数进行字典序排序
-    let array = [WXConfig.token, timestamp, nonce];
+    let array = [WXConfig.Token, timestamp, nonce];
     array.sort();
 
     //3.将三个参数字符串拼接成一个字符串进行sha1加密

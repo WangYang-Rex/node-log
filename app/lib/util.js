@@ -1,0 +1,89 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.dateFormat = exports.getTimestamp = exports.getNonceStr = void 0;
+/**
+ * 获取随机字符串
+ * @param length
+ * @returns string
+ */
+const getNonceStr = (length = 16) => {
+    let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    let str = "";
+    for (let i = 0; i < length; i++) {
+        str += chars.charAt(Math.floor(Math.random() * 62));
+    }
+    return str;
+};
+exports.getNonceStr = getNonceStr;
+/**
+ * 获取时间戳
+ * @returns string
+ */
+const getTimestamp = () => {
+    return Math.round(new Date().getTime() / 1000);
+};
+exports.getTimestamp = getTimestamp;
+/**
+ * 时间格式化函数
+ * @param {string} time 时间戳，为空则取当前时间
+ * @param {string} format format格式，为空则返回扩展过的date对象
+ * @returns format格式时间或者扩展过的date对象
+ */
+const dateFormat = function (time, format) {
+    let date;
+    if (time) {
+        //兼容ios 把yyyy-MM-dd hh:mm 改为 yyyy/MM/dd hh:mm
+        if (typeof time == 'string') {
+            time = time.replace(/\s+/g, ' '); //转换中文空格
+            time = time.replace(/-/g, '/');
+        }
+        if (typeof time == 'string' && time.indexOf('24:') >= 0) {
+            time = time.replace('24:', '23:');
+            var _temp_date = new Date(time);
+            date = new Date(_temp_date.getTime() + 60 * 60 * 1000);
+        }
+        else {
+            date = new Date(time);
+        }
+    }
+    else {
+        date = new Date();
+    }
+    let _time = date.getTime(), _year = date.getFullYear(), _month = date.getMonth() + 1, _date = date.getDate(), _hour = date.getHours(), _minute = date.getMinutes(), _second = date.getSeconds();
+    if (format) {
+        //大小写转换
+        format = format.replace(/Y/g, 'y');
+        format = format.replace(/D/g, 'd');
+        format = format.replace(/H/g, 'h');
+        format = format.replace(/S/g, 's');
+        format = format.replace('yyyy', _year);
+        format = format.replace('MM', _month < 10 ? '0' + _month : _month);
+        format = format.replace('dd', _date < 10 ? '0' + _date : _date);
+        format = format.replace('hh', _hour < 10 ? '0' + _hour : _hour);
+        format = format.replace('mm', _minute < 10 ? '0' + _minute : _minute);
+        format = format.replace('ss', _second < 10 ? '0' + _second : _second);
+        format = format.replace('M', _month);
+        format = format.replace('d', _date);
+        format = format.replace('h', _hour);
+        format = format.replace('m', _minute);
+        format = format.replace('s', _second);
+        return format;
+    }
+    else {
+        let _dateTime = new Date(_year + '/' + _month + '/' + _date + ' 00:00');
+        let obj = {
+            year: _year,
+            month: _month,
+            day: _date,
+            hour: _hour,
+            minute: _minute,
+            second: _second,
+            time: _time,
+            dateTime: _dateTime.getTime(),
+            date: date,
+        };
+        return obj;
+    }
+};
+exports.dateFormat = dateFormat;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXRpbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInV0aWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0E7Ozs7R0FJRztBQUNILE1BQU0sV0FBVyxHQUFHLENBQUMsTUFBTSxHQUFHLEVBQUUsRUFBRSxFQUFFO0lBQ2xDLElBQUksS0FBSyxHQUFHLGdFQUFnRSxDQUFDO0lBQzdFLElBQUksR0FBRyxHQUFHLEVBQUUsQ0FBQztJQUNiLEtBQUssSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxNQUFNLEVBQUUsQ0FBQyxFQUFFLEVBQUU7UUFDL0IsR0FBRyxJQUFJLEtBQUssQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsTUFBTSxFQUFFLEdBQUcsRUFBRSxDQUFDLENBQUMsQ0FBQztLQUNyRDtJQUNELE9BQU8sR0FBRyxDQUFDO0FBQ2IsQ0FBQyxDQUFBO0FBa0ZDLGtDQUFXO0FBaEZiOzs7R0FHRztBQUNILE1BQU0sWUFBWSxHQUFHLEdBQUcsRUFBRTtJQUN4QixPQUFPLElBQUksQ0FBQyxLQUFLLENBQUMsSUFBSSxJQUFJLEVBQUUsQ0FBQyxPQUFPLEVBQUUsR0FBRyxJQUFJLENBQUMsQ0FBQTtBQUNoRCxDQUFDLENBQUE7QUEyRUMsb0NBQVk7QUF6RWQ7Ozs7O0dBS0c7QUFDSCxNQUFNLFVBQVUsR0FBRyxVQUFVLElBQUksRUFBRSxNQUFZO0lBQzdDLElBQUksSUFBSSxDQUFDO0lBQ1QsSUFBSSxJQUFJLEVBQUU7UUFDUiw2Q0FBNkM7UUFDN0MsSUFBSSxPQUFPLElBQUksSUFBSSxRQUFRLEVBQUU7WUFDM0IsSUFBSSxHQUFHLElBQUksQ0FBQyxPQUFPLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBQyxDQUFDLENBQUMsUUFBUTtZQUMxQyxJQUFJLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxJQUFJLEVBQUUsR0FBRyxDQUFDLENBQUM7U0FDaEM7UUFDRCxJQUFJLE9BQU8sSUFBSSxJQUFJLFFBQVEsSUFBSSxJQUFJLENBQUMsT0FBTyxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsRUFBRTtZQUN2RCxJQUFJLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxLQUFLLEVBQUUsS0FBSyxDQUFDLENBQUM7WUFDbEMsSUFBSSxVQUFVLEdBQUcsSUFBSSxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUM7WUFDaEMsSUFBSSxHQUFHLElBQUksSUFBSSxDQUFDLFVBQVUsQ0FBQyxPQUFPLEVBQUUsR0FBRyxFQUFFLEdBQUcsRUFBRSxHQUFHLElBQUksQ0FBQyxDQUFDO1NBQ3hEO2FBQU07WUFDTCxJQUFJLEdBQUcsSUFBSSxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDdkI7S0FDRjtTQUFNO1FBQ0wsSUFBSSxHQUFHLElBQUksSUFBSSxFQUFFLENBQUM7S0FDbkI7SUFDRCxJQUFJLEtBQUssR0FBRyxJQUFJLENBQUMsT0FBTyxFQUFFLEVBQ3hCLEtBQUssR0FBRyxJQUFJLENBQUMsV0FBVyxFQUFFLEVBQzFCLE1BQU0sR0FBRyxJQUFJLENBQUMsUUFBUSxFQUFFLEdBQUcsQ0FBQyxFQUM1QixLQUFLLEdBQUcsSUFBSSxDQUFDLE9BQU8sRUFBRSxFQUN0QixLQUFLLEdBQUcsSUFBSSxDQUFDLFFBQVEsRUFBRSxFQUN2QixPQUFPLEdBQUcsSUFBSSxDQUFDLFVBQVUsRUFBRSxFQUMzQixPQUFPLEdBQUcsSUFBSSxDQUFDLFVBQVUsRUFBRSxDQUFDO0lBQzlCLElBQUksTUFBTSxFQUFFO1FBQ1YsT0FBTztRQUNQLE1BQU0sR0FBRyxNQUFNLENBQUMsT0FBTyxDQUFDLElBQUksRUFBRSxHQUFHLENBQUMsQ0FBQztRQUNuQyxNQUFNLEdBQUcsTUFBTSxDQUFDLE9BQU8sQ0FBQyxJQUFJLEVBQUUsR0FBRyxDQUFDLENBQUM7UUFDbkMsTUFBTSxHQUFHLE1BQU0sQ0FBQyxPQUFPLENBQUMsSUFBSSxFQUFFLEdBQUcsQ0FBQyxDQUFDO1FBQ25DLE1BQU0sR0FBRyxNQUFNLENBQUMsT0FBTyxDQUFDLElBQUksRUFBRSxHQUFHLENBQUMsQ0FBQztRQUNuQyxNQUFNLEdBQUcsTUFBTSxDQUFDLE9BQU8sQ0FBQyxNQUFNLEVBQUUsS0FBSyxDQUFDLENBQUM7UUFDdkMsTUFBTSxHQUFHLE1BQU0sQ0FBQyxPQUFPLENBQUMsSUFBSSxFQUFFLE1BQU0sR0FBRyxFQUFFLENBQUMsQ0FBQyxDQUFDLEdBQUcsR0FBRyxNQUFNLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDO1FBQ25FLE1BQU0sR0FBRyxNQUFNLENBQUMsT0FBTyxDQUFDLElBQUksRUFBRSxLQUFLLEdBQUcsRUFBRSxDQUFDLENBQUMsQ0FBQyxHQUFHLEdBQUcsS0FBSyxDQUFDLENBQUMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUNoRSxNQUFNLEdBQUcsTUFBTSxDQUFDLE9BQU8sQ0FBQyxJQUFJLEVBQUUsS0FBSyxHQUFHLEVBQUUsQ0FBQyxDQUFDLENBQUMsR0FBRyxHQUFHLEtBQUssQ0FBQyxDQUFDLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDaEUsTUFBTSxHQUFHLE1BQU0sQ0FBQyxPQUFPLENBQUMsSUFBSSxFQUFFLE9BQU8sR0FBRyxFQUFFLENBQUMsQ0FBQyxDQUFDLEdBQUcsR0FBRyxPQUFPLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxDQUFDO1FBQ3RFLE1BQU0sR0FBRyxNQUFNLENBQUMsT0FBTyxDQUFDLElBQUksRUFBRSxPQUFPLEdBQUcsRUFBRSxDQUFDLENBQUMsQ0FBQyxHQUFHLEdBQUcsT0FBTyxDQUFDLENBQUMsQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUV0RSxNQUFNLEdBQUcsTUFBTSxDQUFDLE9BQU8sQ0FBQyxHQUFHLEVBQUUsTUFBTSxDQUFDLENBQUM7UUFDckMsTUFBTSxHQUFHLE1BQU0sQ0FBQyxPQUFPLENBQUMsR0FBRyxFQUFFLEtBQUssQ0FBQyxDQUFDO1FBQ3BDLE1BQU0sR0FBRyxNQUFNLENBQUMsT0FBTyxDQUFDLEdBQUcsRUFBRSxLQUFLLENBQUMsQ0FBQztRQUNwQyxNQUFNLEdBQUcsTUFBTSxDQUFDLE9BQU8sQ0FBQyxHQUFHLEVBQUUsT0FBTyxDQUFDLENBQUM7UUFDdEMsTUFBTSxHQUFHLE1BQU0sQ0FBQyxPQUFPLENBQUMsR0FBRyxFQUFFLE9BQU8sQ0FBQyxDQUFDO1FBRXRDLE9BQU8sTUFBTSxDQUFDO0tBQ2Y7U0FBTTtRQUNMLElBQUksU0FBUyxHQUFHLElBQUksSUFBSSxDQUFDLEtBQUssR0FBRyxHQUFHLEdBQUcsTUFBTSxHQUFHLEdBQUcsR0FBRyxLQUFLLEdBQUcsUUFBUSxDQUFDLENBQUM7UUFDeEUsSUFBSSxHQUFHLEdBQUc7WUFDUixJQUFJLEVBQUUsS0FBSztZQUNYLEtBQUssRUFBRSxNQUFNO1lBQ2IsR0FBRyxFQUFFLEtBQUs7WUFDVixJQUFJLEVBQUUsS0FBSztZQUNYLE1BQU0sRUFBRSxPQUFPO1lBQ2YsTUFBTSxFQUFFLE9BQU87WUFFZixJQUFJLEVBQUUsS0FBSztZQUNYLFFBQVEsRUFBRSxTQUFTLENBQUMsT0FBTyxFQUFFO1lBQzdCLElBQUksRUFBRSxJQUFJO1NBQ1gsQ0FBQztRQUVGLE9BQU8sR0FBRyxDQUFDO0tBQ1o7QUFDSCxDQUFDLENBQUM7QUFNQSxnQ0FBVSJ9

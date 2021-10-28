@@ -1,7 +1,7 @@
 import { Controller } from 'egg';
 
 class BaseController extends Controller {
-  success(message: string, data: any = null) {
+  success(message: string = 'success', data: any = null) {
     this.ctx.body = {
       result: 200,
       message,

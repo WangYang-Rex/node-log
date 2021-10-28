@@ -1,3 +1,5 @@
+import { dateFormat } from '../lib/util'
+
 type PageType = {
   page: number,
   pageSize: number,
@@ -23,4 +25,11 @@ module.exports = {
       count: list.length,
     };
   },
+  log (message: string) {
+    var date = `[${dateFormat('', 'YYYY-MM-DD HH:mm:ss')}]: `;
+    console.log(date, message)
+  },
+  dateFormat (str: any, format: any = null) {
+    return dateFormat(str, format)
+  }
 };
