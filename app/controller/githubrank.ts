@@ -38,4 +38,14 @@ export default class GithubrankController extends Controller {
     const list = await this.service.githubrank.list(ctx);
     this.success('查询成功', list);
   }
+
+  public async del() {
+    // 获取post参数
+    const { ctx } = this;
+    let {
+      record_date = '',
+    } = ctx.request.body || {};
+    await this.service.githubrank.del(ctx);
+    this.success('操作成功');
+  }
 }

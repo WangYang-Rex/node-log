@@ -19,6 +19,7 @@ export default (app: Application) => {
 
   router.post('/rank/add.rjson', controller.githubrank.add);
   router.post('/rank/list.rjson', controller.githubrank.list);
+  router.post('/rank/del.rjson', controller.githubrank.del);
 
   // router.get('/', controller.home.index);
   // router.post([ '/error/list.rjson', '/list' ], controller.error.list);

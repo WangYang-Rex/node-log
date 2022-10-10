@@ -56,6 +56,17 @@ class Githubrank extends Service {
       count
     }
   }
+  async del(ctx: Context) {
+    const { request } = ctx;
+    let {
+      record_date = '',
+    } = request.body || {};
+    if (!record_date) {
+      record_date = new Date().toISOString().slice(0, 10)
+    }
+    await this.app.mysql.delete('ranklist', { record_date });
+    return 
+  }
 }
 
 export default Githubrank;
