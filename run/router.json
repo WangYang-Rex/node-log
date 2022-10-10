@@ -134,6 +134,30 @@
   {
     "name": null,
     "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/rank/add.rjson",
+    "regexp": "/^\\/rank\\/add\\.rjson(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/rank/list.rjson",
+    "regexp": "/^\\/rank\\/list\\.rjson(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
       "HEAD",
       "GET"
     ],
@@ -194,7 +218,6 @@
       "OPTIONS",
       "PATCH",
       "POST",
-      "PRI",
       "PROPFIND",
       "PROPPATCH",
       "PURGE",
