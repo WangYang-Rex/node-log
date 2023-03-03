@@ -5,7 +5,7 @@ export default class File extends Service {
   async list(ctx: Context) {
     const { request } = ctx;
     const { page = 1, pageSize = 10, filename } = request.body || {};
-    const where = filename ? ' where filename LIKE "filename"' : '';
+    const where = filename ? ` where filename LIKE "%${filename}%" ` : '';
     const sql = `SELECT * from file ${where} ORDER BY created DESC limit ${pageSize * (page - 1)}, ${pageSize} `;
     const list = await this.app.mysql.query(sql);
     const countRes = await this.app.mysql.query(`SELECT count(*) from file ${where} `);
@@ -38,6 +38,6 @@ export default class File extends Service {
   }
 
   async merge() {
-    
+
   }
 }

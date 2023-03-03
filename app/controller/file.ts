@@ -19,6 +19,7 @@ export default class FilterController extends Controller {
     const {
       page = 1,
       pageSize = 20,
+      filename
     } = ctx.request.body || {};
     console.log(`list: page=${page} pageSize=${pageSize}`);
     const { count, list } = await ctx.service.file.list(ctx);
