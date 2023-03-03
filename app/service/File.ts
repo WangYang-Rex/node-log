@@ -36,4 +36,8 @@ export default class File extends Service {
   async delete(id:string) {
     await this.app.mysql.delete('file', { id });
   }
+
+  async merge() {
+    
+  }
 }

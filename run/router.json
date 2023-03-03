@@ -137,6 +137,30 @@
       "POST"
     ],
     "paramNames": [],
+    "path": "/file/upload/chunk.rjson",
+    "regexp": "/^\\/file\\/upload\\/chunk\\.rjson(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/file/merge.rjson",
+    "regexp": "/^\\/file\\/merge\\.rjson(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
     "path": "/rank/add.rjson",
     "regexp": "/^\\/rank\\/add\\.rjson(?:\\/(?=$))?$/",
     "stack": [

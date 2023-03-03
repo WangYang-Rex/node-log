@@ -3,6 +3,7 @@ import fs = require('fs');
 import path = require('path');
 import pump = require('mz-modules/pump');
 import OSS = require('ali-oss');
+import fse = require('fs-extra');
 
 const aliInfo = {
   region: 'oss-cn-hangzhou',
@@ -119,6 +120,88 @@ export default class FilterController extends Controller {
   async delete() {
     const { id } = this.ctx.request.body || {};
     this.service.file.delete(id);
+    this.ctx.body = {
+      result: 200,
+      message: '删除成功',
+      data: true,
+    };
+  }
+
+  /**
+   * 保存到目录 /public/upload 下
+   * stream 模式
+   */
+  async chunkUpload() {
+    const stream = await this.ctx.getFileStream(); // 获取stream
+    const fields = stream.fields; // 表单数据
+    console.log();
+    // const filename = stream.filename.toLowerCase(); // 获取fieldname
+    // 存储本地
+    const target = path.join(this.config.baseDir, 'app/public/upload', fields.fileName); // 生成目标地址
+    const writeStream = fs.createWriteStream(target); // 创建fs对象
+    await pump(stream, writeStream); // 保存文件
+
+    // const url = '/'
+    this.ctx.body = {
+      result: 200,
+      message: '上传成功',
+      data: 100,
+    };
+  }
+
+  /**
+   * 保存到目录 /public/upload 下
+   * stream 模式
+   */
+  async merge() {
+    const { fileName, chunklist, size } = this.ctx.request.body || {};
+    console.log(fileName, chunklist)
+    const target = path.join(this.config.baseDir, 'app/public/upload', fileName); // 生成目标地址
+
+    const arr = chunklist.map((chunk: any, index: number) => { 
+      return new Promise(resolve => {
+        const chunkDir = path.join(this.config.baseDir, 'app/public/upload', chunk); // 生成目标地址
+        const readStream = fse.createReadStream(chunkDir); // 读取切片
+        // 删除切片
+        readStream.on('end', () => {
+          fse.unlinkSync(chunkDir)// 读取完毕后，删除已经读取过的切片路径
+          resolve(true)
+        })
+        // 写入目标文件 合并切片
+        readStream.pipe(fse.createWriteStream(target, {
+          start: index * size,
+          end: (index + 1) * size,
+        }))
+      })
+     
+    })
+    await Promise.all(arr);
+    console.log('文件合并完成');
+
+    // // 上传oss
+    let result: any;
+    const ossClient = new OSS(aliInfo);
+    const filepath = `cdn/${fileName}`;
+    try {
+      // https://help.aliyun.com/document_detail/111265.html
+      // 处理文件，比如上传到云端
+      result = await ossClient.put(filepath, target)
+    } catch (e) {
+      console.log(e);
+    }
+
+    fse.unlinkSync(target)// 上传完毕后，删除对应文件
+
+    const cdnurl = `http://cdn.html-js.site/${filepath}`;
+
+    await this.ctx.service.file.add({
+      filename: fileName,
+      filepath,
+      ossurl: result.url,
+      cdnurl,
+      created: new Date(),
+    });
+
     this.ctx.body = {
       result: 200,
       message: '删除成功',

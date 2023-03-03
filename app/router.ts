@@ -16,6 +16,8 @@ export default (app: Application) => {
   router.post('/file/upload/stream1.rjson', controller.file.streamUpload1);
   router.post('/file/upload/stream.rjson', controller.file.streamUpload);
   router.post('/file/upload/file.rjson', controller.file.fileUpload);
+  router.post('/file/upload/chunk.rjson', controller.file.chunkUpload);
+  router.post('/file/merge.rjson', controller.file.merge);
 
   router.post('/rank/add.rjson', controller.githubrank.add);
   router.post('/rank/list.rjson', controller.githubrank.list);
