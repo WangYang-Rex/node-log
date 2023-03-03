@@ -190,6 +190,7 @@ export default class FilterController extends Controller {
     } catch (e) {
       console.log(e);
     }
+    console.log('oss上传完毕');
 
     fse.unlinkSync(target)// 上传完毕后，删除对应文件
 
