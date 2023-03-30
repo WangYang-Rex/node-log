@@ -21,7 +21,10 @@ export default class File extends Service {
     const res = await this.app.mysql.get('file', { filename });
     if (res) {
       console.log(res, '有重复数据，执行更新命令---------');
-      await this.app.mysql.update('file', { created }); // 更新 error 表中的记录
+      await this.app.mysql.update('file', {
+        id: res.id,
+        created
+      }); // 更新 error 表中的记录
       return;
     }
     await this.app.mysql.insert('file', {

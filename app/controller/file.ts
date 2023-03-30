@@ -178,7 +178,7 @@ export default class FilterController extends Controller {
     })
     await Promise.all(arr);
     console.log('文件合并完成');
-
+    this.ctx.logger.info('file merge', '文件合并完成');
     // // 上传oss
     let result: any;
     const ossClient = new OSS(aliInfo);
@@ -189,25 +189,40 @@ export default class FilterController extends Controller {
       result = await ossClient.put(filepath, target)
     } catch (e) {
       console.log(e);
+      this.ctx.logger.info('file merge', `文件合并失败: ${JSON.stringify(e)}`);
     }
-    console.log('oss上传完毕');
 
-    fse.unlinkSync(target)// 上传完毕后，删除对应文件
+    if (result.res && result.res.status === 200 && !!result.url) {
+      console.log('oss上传完毕');
+      this.ctx.logger.info('file merge', `oss上传完毕`);
 
-    const cdnurl = `http://cdn.html-js.site/${filepath}`;
+      fse.unlinkSync(target)// 上传完毕后，删除对应文件
 
-    await this.ctx.service.file.add({
-      filename: fileName,
-      filepath,
-      ossurl: result.url,
-      cdnurl,
-      created: new Date(),
-    });
+      const cdnurl = `http://cdn.html-js.site/${filepath}`;
 
-    this.ctx.body = {
-      result: 200,
-      message: '删除成功',
-      data: true,
-    };
+      await this.ctx.service.file.add({
+        filename: fileName,
+        filepath,
+        ossurl: result.url,
+        cdnurl,
+        created: new Date(),
+      });
+
+      this.ctx.body = {
+        result: 200,
+        message: '上传成功',
+        data: true,
+      };
+    } else {
+      console.log('oss合并上传失败');
+      this.ctx.logger.info('file merge', `oss合并上传失败`);
+
+      this.ctx.body = {
+        result: 400,
+        message: '文件合并上传失败',
+        data: true,
+      };
+      return
+    }
   }
 }
